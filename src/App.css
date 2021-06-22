@@ -1,5 +1,17 @@
+* {
+  color: white;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-logo {
@@ -7,32 +19,140 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-console {
+  background-color: #EE5252;
+  height: 90vh;
+  width: 1200px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
   font-size: calc(10px + 2vmin);
   color: white;
+  border-radius: 35px;
 }
 
-.App-link {
-  color: #61dafb;
+#header{
+  font-size: 64px;
+  /* border: 1px solid black; */
+  margin-top: 60px;
+  margin-left: 72px;
+  margin-bottom: 0px;
+  font-weight:800;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/*this section is for the text-input component */
+#text-input {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  margin-left: 74px;
+  margin-bottom: 40px;
+}
+
+#text-input input{
+  width: 900px;
+  height: 75px;
+  /* border: 1px solid black; */
+  border-bottom: 2px solid white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: #EE5252;
+  padding-left: 7px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 43.57px;
+  
+}
+
+#text-input input:focus{
+  outline: none;
+}
+::placeholder {
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color:#0B0B0B;
+  opacity: 27%;
+}
+
+
+#text-input button{
+  width: 144px;
+  height: 61px;
+  background-color: #282C34;
+  border-radius: 20px;
+  margin-left: 3px;
+  border: none;
+  font-size: 30px;
+  font-weight:600;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#text-input button:hover{
+  transform: scale(1.1);
+}
+
+
+
+/* this section is on the list of tasks*/
+.item-group{
+  /* border: 1px solid black; */
+  margin-left: 74px;
+  display:flex;
+  flex-direction: column;
+  align-items:left;
+  overflow:auto;
+  width: 1052px;
+}
+
+.list-item{
+  /* border: 1px solid blue; */
+  margin-bottom: 25px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content:left;
+}
+.list-item h1{
+  font-size: 30px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.list-button {
+  min-height: 29px;
+  min-width: 29px;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: transparent;
+  margin-right: 15px;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: 3px;
+}
+
+#delete-button {
+  margin-left: auto;
+  min-width: 30px;
+  min-height: 20px;
+  align-self: flex-start;
+  margin-top: 3px;
+}
+
+.completed-text {
+  text-decoration-line: line-through;
+}
+
+.completed-button {
+  background-color: white;
+}
+
+#no-tasks-text{
+  margin-left: 74px;
+  font-size: 30px;
+  font-weight: 500;
 }
